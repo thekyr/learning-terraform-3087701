@@ -48,7 +48,7 @@ module "blog_sg" {
 
   name        = "blog"
   description = "Security group for web-server with HTTP ports open within VPC"
-  vpc_id      = module.vpc.public_subnets[0]
+  vpc_id      = module.vpc.public_subnetsall
 
   ingress_rules = ["http-80-tcp","https-443-tcp"]
   ingress_cidr_blocks  = ["0.0.0.0/0"]
